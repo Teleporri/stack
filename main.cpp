@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <queue>
+#include <deque>
 using namespace std;
 
 void testStack() {
@@ -34,7 +35,25 @@ void testQueue(){
         queue1.pop();
     } //先到先出
 }
+
+void testDeque(){
+                    //双端队列
+     deque<int> deque1;
+     deque1.push_front(1);
+     deque1.push_front(2);
+     deque1.push_front(3);
+     deque1.push_back(4);
+     deque1.push_back(5);
+     deque1.push_back(6); //654321
+
+     while (!deque1.empty()){
+         cout<<"front of the deque is " <<deque1.front()<<endl;
+         deque1.pop_front();
+         cout<<"back of the deque is " <<deque1.back()<<endl;
+         deque1.pop_back();
+     }
+
+}
 int main() {
-    testStack();
-    testQueue();
+    testDeque();
 }
