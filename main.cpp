@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include <queue>
 using namespace std;
 
 void testStack() {
@@ -17,6 +18,23 @@ void testStack() {
         stack1.pop(); //出栈
     }
 }
-int main() {
 
+void testQueue(){
+                    //队列
+    queue<char> queue1;
+    queue1.push('a');
+    queue1.push('b');
+    queue1.push('c');
+    queue1.push('d');
+    queue1.push('e');
+
+    while (!queue1.empty()){
+        cout<<"front of the queue is "<<queue1.front()<<endl;
+        cout<<"back of the queue is "<<queue1.back()<<endl;
+        queue1.pop();
+    } //先到先出
+}
+int main() {
+    testStack();
+    testQueue();
 }
